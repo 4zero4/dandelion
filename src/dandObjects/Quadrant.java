@@ -6,9 +6,7 @@
  */
 package dandObjects;
 
-import java.util.*;
-
-import proceduralGenerators.*;
+import java.util.ArrayList;
 
 /**
  * @author Gabriel
@@ -60,10 +58,31 @@ public class Quadrant {
 		//Inicializa as estrelas
 		//=====
 		igniteStars();
+		
 	}//Quadrant
 	
 	public void igniteStars(){
+		double seed = this.quadrantSeed;
 		
-	}
+		//=====
+		//Main loop de criação de estrelas!
+		//=====
+		for(int i=0;i<this.nunberOfStars;i++){
+			double sysX=0,sysY=0,sysZ=0;
+			
+			sysX = proceduralGenerators.Seeder.getCoord(seed);
+			seed = sysX;
+			
+			sysY = proceduralGenerators.Seeder.getCoord(seed);
+			seed = sysY;
+			
+			sysZ = proceduralGenerators.Seeder.getCoord(seed);
+			seed = sysZ;
+			
+			SolarSys tempSys = new SolarSys(sysX,sysY,sysZ,this.quadrantSeed,this.quadrantName);
+			_solarSys.add(tempSys);
+		}
+		
+	}//igniteStars
 
 }
