@@ -79,7 +79,7 @@ public class Quadrant {
 			sysZ = proceduralGenerators.Seeder.getCoord(seed);
 			seed = sysZ;
 			
-			SolarSys tempSys = new SolarSys(sysX,sysY,sysZ,this.quadrantSeed,this.quadrantName);
+			SolarSys tempSys = new SolarSys(i,sysX,sysY,sysZ,this.quadrantSeed,this.quadrantName);
 			_solarSys.add(tempSys);
 		}
 		
