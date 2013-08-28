@@ -47,9 +47,27 @@ public class SolarSys {
 		i+=1;
 		this.solarSysName=(quadrantName+"-"+i);
 		
-		System.out.println("Estrela:"+this.solarSysName+" criada!\nSeed:"+this.solarSysSeed+"\nX:"+this.solarSysCoord[0]+"\nY:"+this.solarSysCoord[1]+"\nZ:"+this.solarSysCoord[2]+"");
-		System.out.println("==================================================");
 		
+	}
+	
+	public String getSolarSysName(){
+		return this.solarSysName;
+	}
+	
+	public double getSolarSysXCoord(){
+		return this.solarSysCoord[0];
+	}
+	
+	public double getSolarSysYCoord(){
+		return this.solarSysCoord[1];
+	}
+	
+	public double getSolarSysZCoord(){
+		return this.solarSysCoord[2];
+	}
+	
+	public double getSolarSysSeed(){
+		return this.solarSysSeed;
 	}
 
 }

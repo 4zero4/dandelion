@@ -80,21 +80,22 @@ public class Quadrant {
 			sysZ = proceduralGenerators.Seeder.getCoord(seed);
 			seed = sysZ;
 			
-			System.out.println("Criando estrela!");
-			System.out.println("==================================================");
+			
 			
 			SolarSys tempSys = new SolarSys(i,sysX,sysY,sysZ,this.quadrantSeed,this.quadrantName);
 			
-			System.out.println("Estrela criada!");
-			System.out.println("==================================================");
+			
 			
 			this._solarSys.add(tempSys);
 			
-			System.out.println("Estrela armazenada!");
-			System.out.println("==================================================");
+			
 			
 		}
 		
 	}//igniteStars
+	
+	public SolarSys getSolarSys(int i){
+		return this._solarSys.get(i);
+	}
 
 }
