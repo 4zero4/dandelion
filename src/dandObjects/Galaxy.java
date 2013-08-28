@@ -1,5 +1,5 @@
 /**
- * Classe responsável pela galáxia.
+ * Classe responsï¿½vel pela galï¿½xia.
  * Gera e armazena o quadrante apartir da imagem da galaxia em uso.
  * 
  */
@@ -17,18 +17,18 @@ import javax.imageio.ImageIO;
  */
 public class Galaxy {
 	
-	public Quadrant _quadrant;//Quadrante atual em memória.
+	public Quadrant _quadrant;//Quadrante atual em memï¿½ria.
 	
-	public BufferedImage mainMap = null;//Mapa da galáxia em memória.
+	public BufferedImage mainMap = null;//Mapa da galï¿½xia em memï¿½ria.
 	
 	public static final String mapName = "MainMap.jpg";//Nome do mapa
 	
 	public static final String mapAddress = ".\\dat\\";//Add do mapa no sistema
 	
 	/**
-	 * Método criador do quadrante.
+	 * Mï¿½todo criador do quadrante.
 	 * Inicializa o quadrante, calculando a dincidade de estrelas com base no posicionamento do mesmo
-	 * e mapa galático de dencidade estelar.
+	 * e mapa galï¿½tico de dencidade estelar.
 	 * 
 	 * @param x
 	 * @param y
@@ -37,13 +37,13 @@ public class Galaxy {
 	public void generateQuadrant(int x,int y,int z){
 		
 		//=====
-		//Carrega o mapa em memória!
+		//Carrega o mapa em memï¿½ria!
 		//=====
 		try {
 			this.mainMap = ImageIO.read(new File(mapAddress + mapName));
 		} catch (IOException e) {
 			System.out.println("============ ERRO!!! ===============");
-			System.out.println(">>> Mapa Principal (" + mapName + ") Não encontrado!");
+			System.out.println(">>> Mapa Principal (" + mapName + ") Nï¿½o encontrado!");
 			System.out.println(">>> Dir: (\"" + mapAddress + mapName + "\")");
 			System.err.println(e);
 			System.out.println("====================================");
@@ -86,6 +86,8 @@ public class Galaxy {
 			p = 0.85;
 		} else if (z == 14 || z == 16) {
 			p = 0.9;
+		} else if (z == 15){
+			p = 1;
 		} else {
 			p = 0;
 		}
@@ -102,7 +104,7 @@ public class Galaxy {
 	}//generateQuadrant
 	
 	/**
-	 * Método que retorna o quadrante em questão.
+	 * Mï¿½todo que retorna o quadrante em questï¿½o.
 	 * 
 	 * @return
 	 */
