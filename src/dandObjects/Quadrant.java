@@ -1,7 +1,7 @@
 /**
- * Classe responsável pelo quadrante.
+ * Classe responsï¿½vel pelo quadrante.
  * Guarda os sistemas solares e os inicializa/administra.
- * Faz várias outras coisas tambem.
+ * Faz vï¿½rias outras coisas tambem.
  * 
  */
 package dandObjects;
@@ -21,7 +21,7 @@ public class Quadrant {
 	public int[] quadrantCoords = new int[3];
 
 	/**
-	 * Método construtor inicializador do quadrante.
+	 * Mï¿½todo construtor inicializador do quadrante.
 	 * 
 	 * Calcula os atributos, inicializa os Systemas, etc...
 	 * 
@@ -40,14 +40,14 @@ public class Quadrant {
 		this.quadrantCoords[2]=z;
 		
 		//=====
-		//Seta o número de estrelas no quadrante.
+		//Seta o nï¿½mero de estrelas no quadrante.
 		//=====
 		this.nunberOfStars = nOfStars;
 		
 		//=====
-		//Calcula a seed única do quadrante
+		//Calcula a seed ï¿½nica do quadrante
 		//=====
-		this.quadrantSeed = (int)((x+(2*y)+(3*z)+nOfStars)/5);
+		this.quadrantSeed = ((x+(2*y)+(3*z)+nOfStars)/5);
 		
 		//=====
 		//Calcula o nome do quadrante
@@ -65,7 +65,7 @@ public class Quadrant {
 		double seed = this.quadrantSeed;
 		
 		//=====
-		//Main loop de criação de estrelas!
+		//Main loop de criaï¿½ï¿½o de estrelas!
 		//=====
 		for(int i=0;i<this.nunberOfStars;i++){
 			double sysX=0,sysY=0,sysZ=0;
