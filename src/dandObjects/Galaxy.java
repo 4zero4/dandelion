@@ -1,5 +1,5 @@
 /**
- * Classe respons�vel pela gal�xia.
+ * Classe responsavel pela galaxia.
  * Gera e armazena o quadrante apartir da imagem da galaxia em uso.
  * 
  */
@@ -17,27 +17,29 @@ import javax.imageio.ImageIO;
  */
 public class Galaxy {
 	
-	public Quadrant _quadrant;//Quadrante atual em mem�ria.
+	public Quadrant _quadrant;//Quadrante atual em memoria.
 	
-	public BufferedImage mainMap = null;//Mapa da gal�xia em mem�ria.
+	public BufferedImage mainMap = null;//Mapa da galaxia em memoria.
 	
 	public static final String mapName = "MainMap.jpg";//Nome do mapa
 	
 	public static final String mapAddress = ".\\dat\\";//Add do mapa no sistema
 	
 	/**
-	 * M�todo criador do quadrante.
+	 * Metodo criador do quadrante.
 	 * Inicializa o quadrante, calculando a dincidade de estrelas com base no posicionamento do mesmo
-	 * e mapa gal�tico de dencidade estelar.
+	 * e mapa galatico de dencidade estelar.
 	 * 
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param x coordenada x do quadrante
+	 * @param y coordenada y do quadrante
+	 * @param z coordenada z do quadrante
 	 */
 	public void generateQuadrant(int x,int y,int z){
 		
 		//=====
-		//Carrega o mapa em mem�ria!
+		//Carrega o mapa em memoria!
+		System.out.println("Carrega o mapa em memoria!");
+		System.out.println("==================================================");
 		//=====
 		try {
 			this.mainMap = ImageIO.read(new File(mapAddress + mapName));
@@ -53,6 +55,8 @@ public class Galaxy {
 		
 		//=====
 		//Calcula a dencidade de estrelas no quadrante!
+		System.out.println("Calcula a dencidade de estrelas no quadrante!");
+		System.out.println("==================================================");
 		//=====
 		double cons = (4E-3 / 10066329), p = 0, corr = 0;
 		int cor = Math.abs(mainMap.getRGB(x, y)), aresta = 100;
@@ -96,6 +100,8 @@ public class Galaxy {
 		
 		//=====
 		//Inicializa o quadrante!
+		System.out.println("Inicializa o quadrante!");
+		System.out.println("==================================================");
 		//=====
 		
 		this._quadrant = new Quadrant(x,y,z,numberOfStars);
@@ -103,10 +109,14 @@ public class Galaxy {
 		
 	}//generateQuadrant
 	
+	public int getNumberOfStarsInQuadrant(){
+		return this._quadrant.nunberOfStars;
+	}
+	
 	/**
-	 * M�todo que retorna o quadrante em quest�o.
+	 * Metodo que retorna o quadrante em questao.
 	 * 
-	 * @return
+	 * @return Quadrante
 	 */
 	public Quadrant getQuadrant(){
 		return this._quadrant;
