@@ -38,8 +38,6 @@ public class Galaxy {
 		
 		//=====
 		//Carrega o mapa em memoria!
-		System.out.println("Carrega o mapa em memoria!");
-		System.out.println("==================================================");
 		//=====
 		try {
 			this.mainMap = ImageIO.read(new File(mapAddress + mapName));
@@ -55,8 +53,6 @@ public class Galaxy {
 		
 		//=====
 		//Calcula a dencidade de estrelas no quadrante!
-		System.out.println("Calcula a dencidade de estrelas no quadrante!");
-		System.out.println("==================================================");
 		//=====
 		double cons = (4E-3 / 10066329), p = 0, corr = 0;
 		int cor = Math.abs(mainMap.getRGB(x, y)), aresta = 100;
@@ -100,8 +96,6 @@ public class Galaxy {
 		
 		//=====
 		//Inicializa o quadrante!
-		System.out.println("Inicializa o quadrante!");
-		System.out.println("==================================================");
 		//=====
 		
 		this._quadrant = new Quadrant(x,y,z,numberOfStars);

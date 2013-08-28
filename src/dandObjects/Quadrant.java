@@ -34,8 +34,6 @@ public class Quadrant {
 		
 		//=====
 		//seta as coordenadas do quadrante
-		System.out.println("seta as coordenadas do quadrante!");
-		System.out.println("==================================================");
 		//=====
 		this.quadrantCoords[0]=x;
 		this.quadrantCoords[1]=y;
@@ -43,29 +41,21 @@ public class Quadrant {
 		
 		//=====
 		//Seta o numero de estrelas no quadrante.
-		System.out.println("Seta o numero de estrelas no quadrante!");
-		System.out.println("==================================================");
 		//=====
 		this.nunberOfStars = nOfStars;
 		
 		//=====
 		//Calcula a seed unica do quadrante
-		System.out.println("Calcula a seed unica do quadrante!");
-		System.out.println("==================================================");
 		//=====
 		this.quadrantSeed = ((x+(2*y)+(3*z)+nOfStars)/5);
 		
 		//=====
 		//Calcula o nome do quadrante
-		System.out.println("Calcula o nome do quadrante!");
-		System.out.println("==================================================");
 		//=====
 		this.quadrantName=(this.quadrantSeed+"-"+x+"-"+y+"-"+z);
 		
 		//=====
 		//Inicializa as estrelas
-		System.out.println("Inicializa as estrelas!");
-		System.out.println("==================================================");
 		//=====
 		igniteStars();
 		
@@ -77,8 +67,6 @@ public class Quadrant {
 		
 		//=====
 		//Main loop de criacao de estrelas!
-		System.out.println("Main loop de criacao de estrelas!");
-		System.out.println("==================================================");
 		//=====
 		for(int i=0;i<this.nunberOfStars;i++){
 			double sysX=0,sysY=0,sysZ=0;
