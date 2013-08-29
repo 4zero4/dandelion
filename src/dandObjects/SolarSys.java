@@ -42,6 +42,7 @@ public class SolarSys {
 		i+=1;
 		this.solarSysName=(quadrantName+"-"+i);
 <<<<<<< HEAD
+<<<<<<< HEAD
 	}
 	
 	public void generate() {
@@ -80,5 +81,12 @@ public class SolarSys {
 	}
 >>>>>>> parent of 1a6b1e3... Mais coisas
 
+=======
+		
+		System.out.println("Estrela:"+this.solarSysName+" criada!\nSeed:"+this.solarSysSeed+"\nX:"+this.solarSysCoord[0]+"\nY:"+this.solarSysCoord[1]+"\nZ:"+this.solarSysCoord[2]+"");
+		System.out.println("==================================================");
+		
+	}
+>>>>>>> parent of 1a6b1e3... Mais coisas
 
 }
