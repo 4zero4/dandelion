@@ -40,6 +40,7 @@ public class TestMain {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	
 	public static void createQuadrant(){
@@ -86,6 +87,8 @@ public class TestMain {
 		
 		
 	}
+=======
+>>>>>>> parent of 1a6b1e3... Mais coisas
 =======
 >>>>>>> parent of 1a6b1e3... Mais coisas
 =======
