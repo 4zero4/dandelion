@@ -1,26 +1,17 @@
 package testers;
 
-import java.util.Scanner;
-
 import dandObjects.*;
 
 public class TestMain {
 	
 	public static Galaxy galaxia;
-	public static Scanner s = new Scanner(System.in);
 
 	public static void main(String[] args) {
 		
-		System.out.println("Bem Vindo!");
-		System.out.println("Iniciando a galaxia!");
 		
 		galaxia = new Galaxy();
 		
-		createQuadrant();
-		
-		while(true){
-			printStarsInQuadrant();
-		}
+		countNumberOfStarsInGalaxy();
 		
 		
 	}
@@ -32,20 +23,21 @@ public class TestMain {
 			
 			for(int x=0;x<1000;x++){
 				
-				System.out.println("\n==========\nX:"+x+"/1000\nY:"+y+"/1000\nStars so far: "+number);
+				System.out.println("==========\nX:"+x+"/1000\nY:"+y+"/1000\nStars so far: "+number);
 				
 				for(int z=0;z<=30;z++){
 					
 					galaxia.generateQuadrant(x, y, z);
 					number+=galaxia._quadrant.nunberOfStars;
 					
-					System.out.print(".");
+					//System.out.print(".");
 				}//Z
 			}//Y
 		}//X
 		System.out.println("+++++++++++++++++++++++++++++++++");
 		System.out.println(number);
 	}//countNumberOfStarsInGalaxy
+<<<<<<< HEAD
 	
 	
 	public static void createQuadrant(){
@@ -92,5 +84,7 @@ public class TestMain {
 		
 		
 	}
+=======
+>>>>>>> parent of 1a6b1e3... Mais coisas
 
 }

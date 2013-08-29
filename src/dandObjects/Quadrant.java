@@ -75,6 +75,7 @@ public class Quadrant {
 			seed = sysY;
 			sysZ = proceduralGenerators.Seeder.getCoord(seed);
 			seed = sysZ;
+<<<<<<< HEAD
 			//=====
 			//Calcula se esta em alcance
 			//=====
@@ -87,8 +88,25 @@ public class Quadrant {
 				this._solarSys.add(tempSys);
 				this.nunberOfStarsInRange++;
 			}	
+=======
+			
+			System.out.println("Criando estrela!");
+			System.out.println("==================================================");
+			
+			SolarSys tempSys = new SolarSys(i,sysX,sysY,sysZ,this.quadrantSeed,this.quadrantName);
+			
+			System.out.println("Estrela criada!");
+			System.out.println("==================================================");
+			
+			this._solarSys.add(tempSys);
+			
+			System.out.println("Estrela armazenada!");
+			System.out.println("==================================================");
+			
+>>>>>>> parent of 1a6b1e3... Mais coisas
 		}
 	}//igniteStars
+<<<<<<< HEAD
 		
 	/**
 	 * Retorna o sistema solar, no indice 'i'
@@ -131,5 +149,7 @@ public class Quadrant {
 	public int[] getQuadrantCoords(){
 		return this.quadrantCoords;
 	}
+=======
+>>>>>>> parent of 1a6b1e3... Mais coisas
 
 }
