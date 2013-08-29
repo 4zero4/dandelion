@@ -104,11 +104,15 @@ public class Quadrant {
 			System.out.println("==================================================");
 			
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 1a6b1e3... Mais coisas
+=======
 >>>>>>> parent of 1a6b1e3... Mais coisas
 =======
 >>>>>>> parent of 1a6b1e3... Mais coisas
 		}
 	}//igniteStars
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 		
@@ -153,6 +157,8 @@ public class Quadrant {
 	public int[] getQuadrantCoords(){
 		return this.quadrantCoords;
 	}
+=======
+>>>>>>> parent of 1a6b1e3... Mais coisas
 =======
 >>>>>>> parent of 1a6b1e3... Mais coisas
 =======
