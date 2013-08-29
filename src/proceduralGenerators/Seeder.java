@@ -1,7 +1,10 @@
+/**
+ * Classe principal respons√°vel pelas 'seeds' e controle de acontecimentos pseudo-aleat√≥rios.
+ * 
+ */
 package proceduralGenerators;
 
 /**
- * Classe principal respons·vel pelas 'seeds' e controle de acontecimentos pseudo-aleatÛrios.
  * @author Gabriel
  *
  */
