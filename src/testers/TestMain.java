@@ -37,7 +37,7 @@ public class TestMain {
 				for(int z=0;z<=30;z++){
 					
 					galaxia.generateQuadrant(x, y, z);
-					number+=galaxia.getNumberOfStarsInQuadrant();
+					number+=galaxia._quadrant.nunberOfStars;
 					
 					System.out.print(".");
 				}//Z
@@ -72,18 +72,18 @@ public class TestMain {
 	public static void printStarsInQuadrant(){
 		
 		
-		System.out.println("Estrelas no quadrante: "+galaxia.getNumberOfStarsInQuadrant());
+		System.out.println("Estrelas no quadrante: "+galaxia._quadrant.nunberOfStarsInRange);
 		
 		System.out.println("Qual estrela deseja ver? (entre com o número da mesma.)");
 		
 		int i=s.nextInt();
 		i++;
 		System.out.println("=========================================================");
-		System.out.println("Nome da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysName());
+		System.out.println("Nome da estrela: "+galaxia._quadrant.getSolarSys(i).getSolarSysName());
 		System.out.println("Seed da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysSeed());
-		System.out.println("Cood X da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysXCoord());
-		System.out.println("Cood Y da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysYCoord());
-		System.out.println("Cood Z da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysZCoord());
+		System.out.println("Cood X da estrela: "+galaxia.getQuadrant().getSolarSys(i).solarSysCoord[0]);
+		System.out.println("Cood Y da estrela: "+galaxia.getQuadrant().getSolarSys(i).solarSysCoord[1]);
+		System.out.println("Cood Z da estrela: "+galaxia.getQuadrant().getSolarSys(i).solarSysCoord[2]);
 		
 		
 		
