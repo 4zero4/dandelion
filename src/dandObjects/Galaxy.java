@@ -1,3 +1,8 @@
+/**
+ * Classe responsavel pela galaxia.
+ * Gera e armazena o quadrante apartir da imagem da galaxia em uso.
+ * 
+ */
 package dandObjects;
 
 import java.awt.image.BufferedImage;
@@ -7,17 +12,17 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 
 /**
- * Classe responsavel pela galaxia.
- * Gera e armazena o quadrante apartir da imagem da galaxia em uso.
- * 
  * @author Gabriel
  *
  */
 public class Galaxy {
 	
 	public Quadrant _quadrant;//Quadrante atual em memoria.
+	
 	public BufferedImage mainMap = null;//Mapa da galaxia em memoria.
+	
 	public static final String mapName = "MainMap.jpg";//Nome do mapa
+	
 	public static final String mapAddress = ".\\dat\\";//Add do mapa no sistema
 	
 	/**
@@ -97,6 +102,10 @@ public class Galaxy {
 		
 		
 	}//generateQuadrant
+	
+	public int getNumberOfStarsInQuadrant(){
+		return this._quadrant.nunberOfStars;
+	}
 	
 	/**
 	 * Metodo que retorna o quadrante em questao.
