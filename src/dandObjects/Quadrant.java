@@ -1,5 +1,5 @@
 /**
- * Classe responsavel pelo quadrante.
+ * Classe responsavel pelo quadrante..
  * Guarda os sistemas solares e os inicializa/administra.
  * Faz varias outras coisas tambem.
  * 
