@@ -16,11 +16,22 @@ public class TestMain {
 		
 		galaxia = new Galaxy();
 		
-		createQuadrant();
+		System.out.println("1: Conta sistemas na galaxia\n2: explora sistemas");
 		
-		while(true){
-			printStarsInQuadrant();
+		int o = s.nextInt();
+		
+		if(o==1){
+			countNumberOfStarsInGalaxy();
+		}else{
+			
+			
+			createQuadrant();
+		
+			while(true){
+				printStarsInQuadrant();
+			}
 		}
+
 		
 		
 	}
