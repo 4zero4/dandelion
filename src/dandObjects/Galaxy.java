@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Classe responsavel pela galaxia.
  * Gera e armazena o quadrante apartir da imagem da galaxia em uso.
  * 
