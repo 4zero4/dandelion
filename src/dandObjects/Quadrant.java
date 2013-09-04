@@ -1,24 +1,24 @@
-/**
- * Classe responsavel pelo quadrante.
- * Guarda os sistemas solares e os inicializa/administra.
- * Faz varias outras coisas tambem.
- * 
- */
 package dandObjects;
 
 import java.util.ArrayList;
 
 /**
+ * Classe responsavel pelo quadrante.
+ * Guarda os sistemas solares e os inicializa/administra.
+ * Faz varias outras coisas tambem.
+ * 
+ * Sem metodos seters devido a sua natureza descartavel e dinamica, quer mudar algo? crie outro.
+ * 
  * @author Gabriel
  *
  */
 public class Quadrant {
 	
-	public String quadrantName = "";//Nome do quadrante
-	public double quadrantSeed;//Seed do quadrante
-	public ArrayList<SolarSys> _solarSys;//ArrayList com os sistemas solares
-	public int nunberOfStars;//numero de estrelas
-	public int[] quadrantCoords = new int[3];//coordenadas do quadrante na galaxya
+	String quadrantName = "";//Nome do quadrante
+	double quadrantSeed;//Seed do quadrante
+	ArrayList<SolarSys> _solarSys;//ArrayList com os sistemas solares
+	int nunberOfSystems;//numero de sistemas
+	int[] quadrantCoords = new int[3];//coordenadas do quadrante na galaxya
 
 	/**
 	 * M�todo construtor inicializador do quadrante.
@@ -42,7 +42,7 @@ public class Quadrant {
 		//=====
 		//Seta o numero de estrelas no quadrante.
 		//=====
-		this.nunberOfStars = nOfStars;
+		this.nunberOfSystems = nOfStars;
 		
 		//=====
 		//Calcula a seed unica do quadrante
@@ -52,7 +52,7 @@ public class Quadrant {
 		//=====
 		//Calcula o nome do quadrante
 		//=====
-		this.quadrantName=(this.quadrantSeed+"-"+x+"-"+y+"-"+z);
+		this.quadrantName=(proceduralGenerators.NameGen.createQuadrantName(((int)this.quadrantSeed*100))+"-"+x+"-"+y+"-"+z);
 		
 	}//Quadrant
 	
@@ -67,7 +67,7 @@ public class Quadrant {
 		//=====
 		//Main loop de criacao de estrelas!
 		//=====
-		for(int i=0;i<this.nunberOfStars;i++){
+		for(int i=0;i<this.nunberOfSystems;i++){
 			double sysX=0,sysY=0,sysZ=0;
 			sysX = proceduralGenerators.Seeder.getCoord(seed);
 			seed = sysX;
@@ -88,14 +88,14 @@ public class Quadrant {
 	 * @param y y do usuario (em relacao ao quadrante)
 	 * @param z z do usuario (em relacao ao quadrante)
 	 */
-	public void igniteStarsInRange(int r,double x,double y,double z){
+	public void igniteStars(int r,double x,double y,double z){
 		double seed = this.quadrantSeed;
 		this._solarSys = new ArrayList<SolarSys>();
 		
 		//=====
 		//Main loop de criacao de estrelas!
 		//=====
-		for(int i=0;i<this.nunberOfStars;i++){
+		for(int i=0;i<this.nunberOfSystems;i++){
 			double sysX=0,sysY=0,sysZ=0;
 			sysX = proceduralGenerators.Seeder.getCoord(seed);
 			seed = sysX;
@@ -111,8 +111,41 @@ public class Quadrant {
 		}
 	}//igniteStars
 	
+	//==========
+	//Geters
+	//==========
+	
+	/**
+	 * Retorna o nome do quadrante
+	 * @return String
+	 */
+	public String getQuadrantName(){
+		return this.quadrantName;
+	}//getQuadrantName
+	
+	/**
+	 * Retorna o sistema solar na posicao i.
+	 * @param i
+	 * @return
+	 */
 	public SolarSys getSolarSys(int i){
 		return this._solarSys.get(i);
 	}//getSolarSys
+	
+	/**
+	 * Retorna os systemas solares inicializados
+	 * @return ArrayList<SolarSys>
+	 */
+	public ArrayList<SolarSys> getSolarSis(){
+		return this._solarSys;
+	}//getSolarSis
+	
+	/**
+	 * Retorna o numero de sistemas no quadrante.
+	 * @return
+	 */
+	public int getNumberOfSystems(){
+		return this.nunberOfSystems;
+	}//getNumberOfSystems
 
 }//Quadrant

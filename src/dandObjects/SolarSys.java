@@ -1,20 +1,19 @@
-/**
- * Classe responsável pelos sistemas solares.
- */
 package dandObjects;
 
 import java.util.*;
 
 /**
+ * Classe responsável pelos sistemas solares.
+ * 
  * @author Gabriel
  *
  */
 public class SolarSys {
 	
-	public ArrayList<Star> _stars;
-	public String solarSysName = "";
-	public double solarSysSeed;
-	public double[] solarSysCoord = new double[3];
+	ArrayList<Star> _stars;
+	String solarSysName = "";
+	double solarSysSeed;
+	double[] solarSysCoord = new double[3];
 
 	/**
 	 * Metodo construtor
@@ -39,17 +38,25 @@ public class SolarSys {
 		//=====
 		//Seta a seed única para o sistema
 		//=====
-		this.solarSysSeed=((sysX+sysY*2+sysZ*3+quadrantSeed)/6);
+		this.solarSysSeed=((sysX+sysY*2+sysZ*3*quadrantSeed)/6);
 		
 		//=====
 		//Seta o nome do sistema.
 		//=====
-		i+=1;
-		this.solarSysName=(quadrantName+"-"+i);
-		
-		
-	}
+		i++;
+		this.solarSysName=(quadrantName+"-"+i);	
+	}//SolarSys
 	
+	
+	
+	//==========
+	//Geters
+	//==========
+	
+	/**
+	 * Retorna o nome do sistema solar
+	 * @return String
+	 */
 	public String getSolarSysName(){
 		return this.solarSysName;
 	}
