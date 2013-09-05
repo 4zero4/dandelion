@@ -19,7 +19,7 @@ public class Galaxy {
 	public Quadrant _quadrant;//Quadrante atual em memoria.
 	public BufferedImage mainMap = null;//Mapa da galaxia em memoria.
 	public static final String mapName = "MainMap.jpg";//Nome do mapa
-	public static final String mapAddress = "."+File.separator+"dat"+File.separator;//Add do mapa no sistema
+	public static final String mapAddress = "."+File.separator+"dat"+File.separator+"GalaxyMap"+File.separator;//Add do mapa no sistema
 	
 	/**
 	 * Construtor
@@ -45,7 +45,7 @@ public class Galaxy {
 	
 	/**
 	 * Metodo criador do quadrante.
-	 * Inicializa o quadrante, calculando a dincidade de estrelas com base no posicionamento do mesmo
+	 * Inicializa o quadrante, calculando a dencidade de estrelas com base no posicionamento do mesmo
 	 * e mapa galatico de dencidade estelar.
 	 * 
 	 * @param x coordenada x do quadrante

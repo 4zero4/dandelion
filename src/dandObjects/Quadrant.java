@@ -1,6 +1,7 @@
 package dandObjects;
-
 import java.util.ArrayList;
+
+
 
 /**
  * Classe responsavel pelo quadrante.
@@ -47,12 +48,13 @@ public class Quadrant {
 		//=====
 		//Calcula a seed unica do quadrante
 		//=====
-		this.quadrantSeed = ((x+(2*y)+(3*z)*nOfStars)/5);
+		this.quadrantSeed = proceduralGenerators.Seeder.getSeed(((x+(2*y)+(3*z)*nOfStars)/5));
 		
 		//=====
 		//Calcula o nome do quadrante
-		//=====
-		this.quadrantName=(proceduralGenerators.NameGen.createQuadrantName(((int)this.quadrantSeed*100))+"-"+x+"-"+y+"-"+z);
+		//=====		
+		
+		this.quadrantName=(""+(x+(2*y)+(3*z)));
 		
 	}//Quadrant
 	
