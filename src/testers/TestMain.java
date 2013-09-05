@@ -5,103 +5,114 @@ import java.util.Scanner;
 import dandObjects.*;
 
 public class TestMain {
-	
+
 	public static Galaxy galaxia;
 	public static Scanner s = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("Bem Vindo!");
 		System.out.println("Iniciando a galaxia!");
-		
+
 		galaxia = new Galaxy();
-		
-		System.out.println("1: Conta sistemas na galaxia\n2: explora sistemas");
-		
+
+		prtL("Escolhas:");
+		prtL("Conta os sistemas na galaxia --> 1");
+		prtL("Explora a galaxia (texto x.x) --> 2");
+
 		int o = s.nextInt();
-		
-		if(o==1){
-			countNumberOfStarsInGalaxy();
-		}else{
-			
-			
-			createQuadrant();
-		
-			while(true){
-				printStarsInQuadrant();
+		int v = 0;
+
+		while (v == 0) {
+			switch (o) {// MENU
+
+			case 1:countNumberOfStarsInGalaxy();
+			break;
+			case 2:
+
 			}
 		}
 
-		
-		
 	}
-	
-	public static void countNumberOfStarsInGalaxy(){
+
+	public static void countNumberOfStarsInGalaxy() {
 		long number = 0;
-		
-		for(int y=0;y<1000;y++){
-			
-			for(int x=0;x<1000;x++){
-				
-				System.out.println("\n==========\nX:"+x+"/1000\nY:"+y+"/1000\nStars so far: "+number);
-				
-				for(int z=0;z<=30;z++){
-					
+
+		for (int y = 0; y < 1000; y++) {
+
+			for (int x = 0; x < 1000; x++) {
+
+				System.out.println("\n==========\nX:" + x + "/1000\nY:" + y
+						+ "/1000\nSystems so far: " + number);
+
+				for (int z = 0; z <= 30; z++) {
+
 					galaxia.generateQuadrant(x, y, z);
-					number+=galaxia.getNumberOfStarsInQuadrant();
-					
+					number += galaxia.getQuadrant().getNumberOfSystems();
+
 					System.out.print(".");
-				}//Z
-			}//Y
-		}//X
+				}// Z
+			}// Y
+		}// X
 		System.out.println("+++++++++++++++++++++++++++++++++");
 		System.out.println(number);
-	}//countNumberOfStarsInGalaxy
-	
-	
-	public static void createQuadrant(){
-		
+	}// countNumberOfStarsInGalaxy
+
+	public static void createQuadrant() {
+
 		System.out.println("Entre com as coordenadas no quadrante.");
-		
+
 		System.out.println("X(de 0 a 999):");
 		int x = s.nextInt();
-		
+
 		System.out.println("Y(de 0 a 999):");
 		int y = s.nextInt();
-		
+
 		System.out.println("Z(de 0 a 30):");
 		int z = s.nextInt();
-		
+
 		System.out.println("Criando o quadrante...");
 		galaxia.generateQuadrant(x, y, z);
-		
+
 		System.out.println("Quadrante criado!");
-		
+
 	}
-	
-	
-	public static void printStarsInQuadrant(){
-		
-		
-		System.out.println("Estrelas no quadrante: "+galaxia.getNumberOfStarsInQuadrant());
-		
-		System.out.println("Qual estrela deseja ver? (entre com o número da mesma.)");
-		
-		int i=s.nextInt();
-		i++;
-		System.out.println("=========================================================");
-		System.out.println("Nome da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysName());
-		System.out.println("Seed da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysSeed());
-		System.out.println("Cood X da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysXCoord());
-		System.out.println("Cood Y da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysYCoord());
-		System.out.println("Cood Z da estrela: "+galaxia.getQuadrant().getSolarSys(i).getSolarSysZCoord());
-		
-		
-		
-		
-		
-		
-		
+
+	public static void printStarsInQuadrant() {
+
+		System.out.println("Estrelas no quadrante: "
+				+ galaxia.getQuadrant().getNumberOfSystems());
+
+		System.out
+				.println("Qual estrela deseja ver? (entre com o número da mesma.)");
+
+		int i = s.nextInt();
+
+		System.out
+				.println("=========================================================");
+		System.out.println("Nome da estrela: "
+				+ galaxia.getQuadrant().getSolarSys(i).getSolarSysName());
+		System.out.println("Seed da estrela: "
+				+ galaxia.getQuadrant().getSolarSys(i).getSolarSysSeed());
+		System.out.println("Cood X da estrela: "
+				+ galaxia.getQuadrant().getSolarSys(i).getSolarSysXCoord());
+		System.out.println("Cood Y da estrela: "
+				+ galaxia.getQuadrant().getSolarSys(i).getSolarSysYCoord());
+		System.out.println("Cood Z da estrela: "
+				+ galaxia.getQuadrant().getSolarSys(i).getSolarSysZCoord());
+		System.out
+				.println("=========================================================");
+
+	}
+
+	// =================================================
+	// =================================================
+	public static void prtL(String p) {
+		System.out.println(p);
+	}
+
+	public static void prt(String p) {
+		System.out.print(p);
 	}
 
 }
